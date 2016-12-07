@@ -114,8 +114,8 @@ int main()
 	}
 
 	ImprimeArvore(raiz);
-	printf("\nMaior valor contido na ·rvore: %d\n",Maior(raiz));
-	printf("Menor valor contido na ·rvore: %d\n",Menor(raiz));
+	printf("\nMaior valor contido na √°rvore: %d\n",Maior(raiz));
+	printf("Menor valor contido na √°rvore: %d\n",Menor(raiz));
 	printf("Quantas folhas tem: %d\n",ContaFolhas(raiz));
 	printf("Altura: %d\n",Altura(raiz));
 	printf("Digite um valor para a busca: \n");
@@ -123,7 +123,7 @@ int main()
 	if(busca(raiz,vBusca)==1)
 		printf("VALOR ENCONTRADO\n");
 	else
-		printf("VALOR N√O ENCONTRADO\n");
+		printf("VALOR N√ÉO ENCONTRADO\n");
 
 	return 0;
 }

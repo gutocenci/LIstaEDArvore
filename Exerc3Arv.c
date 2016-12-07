@@ -63,4 +63,3 @@ void ImprimeArvore(TNo *r)
 	}
 	printf(" >");
 }
-

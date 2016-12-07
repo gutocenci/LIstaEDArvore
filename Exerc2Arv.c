@@ -15,7 +15,7 @@ int Equivalencia(TNo *raiz1, TNo *raiz2);
 int main()
 { 
 	TNo *raiz1 = NULL,*raiz2 = NULL, *aux, *pai;
-	int numero;
+	int numero, contaarv1, contaarv2;
 	while(1)
 		{ 
 		printf("\nInforme o valor da arvore 1:\n"); scanf("%d", &numero);
@@ -52,24 +52,26 @@ int main()
 		else
 			pai->dir = aux;
 	}
-	printf("\n\nA arvore1 possui %d elementos:\n", ContaNos(raiz1));
+	contaarv1 = ContaNos(raiz1);
+	contaarv2 = ContaNos(raiz2);
+	printf("\n\nA arvore1 possui %d elementos:\n", contaarv1);
 	ImprimeArvore(raiz1, 0);
 	printf("\n");
-	printf("\n\nA arvore2 possui %d elementos:\n", ContaNos(raiz2));
+	printf("\n\nA arvore2 possui %d elementos:\n", contaarv2);
 	ImprimeArvore(raiz2, 0);
 	if(ContaNos(raiz1)==0 && ContaNos(raiz2)==0)
 	{
-		printf("As arvores estão vazias");
+		printf("As arvores estão equivalentes, ambas vazias !!");
 	}
 	else
 	{
-		if(Equivalencia(raiz1,raiz2)==1)
+		if(Equivalencia(raiz1,raiz2)==1 && contaarv1 == contaarv2)
 		{
 			printf("As arvores sao equivalentes");
 		}
 		else
 		{
-			printf("As nao arvores sao equivalentes");
+			printf("As arvores nao sao equivalentes");
 		}
 	}
 	return 0;
